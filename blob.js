@@ -1,6 +1,7 @@
-/**
+/*
   * https://lab.hakim.se/blob/03/
   */
+console.log("bla");
 BlobWorld = new function() {
   
   var SCREEN_WIDTH = window.innerWidth;
