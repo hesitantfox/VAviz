@@ -2,7 +2,7 @@
   * https://lab.hakim.se/blob/03/
   */
 console.log("bla");
-/**BlobWorld = new function() {
+BlobWorld = new function() {
   
   var SCREEN_WIDTH = window.innerWidth;
   var SCREEN_HEIGHT = window.innerHeight;
@@ -701,6 +701,6 @@ function distanceBetween(p1,p2) {
 
 
 BlobWorld.init();
-**/
+
   
   
