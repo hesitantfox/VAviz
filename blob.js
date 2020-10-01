@@ -2,7 +2,7 @@
   * https://lab.hakim.se/blob/03/
   */
 console.log("bla");
-BlobWorld = new function() {
+/**BlobWorld = new function() {
   
   var SCREEN_WIDTH = window.innerWidth;
   var SCREEN_HEIGHT = window.innerHeight;
@@ -42,7 +42,7 @@ BlobWorld = new function() {
   
   this.init = function() {
     
-    canvas = document.getElementById( 'world' );
+    canvas = document.getElementById('world');
     
     if (canvas && canvas.getContext) {
       context = canvas.getContext('2d');
@@ -701,5 +701,6 @@ function distanceBetween(p1,p2) {
 
 
 BlobWorld.init();
+**/
   
   
