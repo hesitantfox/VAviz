@@ -87,7 +87,7 @@ button:hover {
     z-index: -10;
     transition: 1s;
     animation: float 10s infinite;
-  
+    animation: pulse 5s infinite;
     clip-path: polygon(49% 25%, 45% 26%, 40% 29%, 39% 36%, 38% 46%, 40% 50%, 43% 53%, 47% 54%, 53% 54%, 62% 52%, 65% 43%, 68% 35%, 65% 25%, 58% 24%, 54% 23%);
 }
 button:nth-child(1):hover ~ .shape {
@@ -112,6 +112,17 @@ button:nth-child(4):hover ~ .shape {
     100% {
         transform: translateY(0) rotateX(0);
     }
+
+
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
 }
 
 
