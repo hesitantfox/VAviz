@@ -112,7 +112,7 @@ button:nth-child(4):hover ~ .shape {
     100% {
         transform: translateY(0) rotateX(0);
     }
-
+}
 
 
 @keyframes pulse {
@@ -123,6 +123,6 @@ button:nth-child(4):hover ~ .shape {
     color: #FF4136;
   }
 }
-}
+
 
 
