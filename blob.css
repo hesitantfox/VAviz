@@ -97,10 +97,10 @@ button:nth-child(2):hover ~ .shape {
     clip-path:  polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 button:nth-child(3):hover ~ .shape {
-    clip-path: polygon(49% 3%, 81% 12%, 88% 36%, 68% 59%, 78% 88%, 43% 100%, 10% 80%, 6% 47%, 15% 19%);
+    clip-path:  polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 button:nth-child(4):hover ~ .shape {
-    clip-path: polygon(49% 3%, 81% 12%, 88% 36%, 68% 59%, 78% 88%, 43% 100%, 10% 80%, 6% 47%, 15% 19%);
+    clip-path:  polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 @keyframes float {
     0% {
