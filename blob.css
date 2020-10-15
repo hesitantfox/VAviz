@@ -83,7 +83,6 @@ button:hover {
     position: absolute;
     left: -300px;
     top: -80px;
-    background-color: black;
     z-index: -10;
     transition: 1s;
     animation: float 10s infinite;
@@ -117,10 +116,10 @@ button:nth-child(4):hover ~ .shape {
 
 @keyframes pulse {
   0% {
-    color: #001F3F;
+    background-color: #001F3F;
   }
   100% {
-    color: #FF4136;
+    background-color: #FF4136;
   }
 }
 
