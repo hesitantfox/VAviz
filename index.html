@@ -1,44 +1,41 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<link rel="shortcut icon" href="#" />
-<head>
-  <meta charset="UTF-8">
-  <title>Canvas</title>
-
- <link rel="stylesheet" href="blob.css">
-</head>
-<body>
-<p>Double click to split. <a id="keyboardUp" href="#">Increase</a> / <a id="keyboardDown" href="#">decrease</a> size or <a id="keyboardLeft" href="#">Previous</a> / <a id="keyboardRight" href="#">Next</a> skin.</p> 
-  <canvas id='world'></canvas>
-  <script src="blob.js">  </script>
-
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="blob.css">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content ="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie-edge">
- <title>Document</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div class="box">
-            <div class="side side--front">
-                <button> <p>sad</p> </button>
-                <button> <p>happy</p> </button>
-                <button> <p>question</p> </button>
-                <button> <p>-</p> </button>
-                <div class="shape"></div>
-<h2 class="question">?</h2>
-            </div>
-            <div class="side side--left"></div>
-            <div class="side side--top"></div>
+         <!-- <button> <p>happy</p> </button> -->
+         <!-- <button> <p>question</p> </button> -->
+        <!-- <button> <p>-</p> </button> -->
+        <div class="shapecontainer">
+            <div class="shape" id="shapeid"></div>
         </div>
-    </div>
+        
+        <div class="slidecontainer">
+            <p></p>
+            <label for="slidersizerange"> size </label><br>
+            <input type="range" min="1" max="800" value="200" class="slider" id="slidersizerange" name ="slidersizerange">
+            <p></p>
+            <label for="slidercornersrange"> shape </label><br>
+            <input type="range" min="1" max="10" value="0" class="slider" id="slidercornersrange" name ="slidercornersrange">
+            <p></p>
+          
+        </div>
+        <div class="dropdownAndCheckboxContainer">
+            <div class="colorPicker">
+                <span>_</span>
+                <label for="favcolor">Select a color:</label>
+                    <input type="color" id="colorPicker" name="favcolor" value="#ff0000"> 
+                </div>
+            </div>
+            <input type="checkbox" id="checkboxHovering" name="checkboxHovering" value="false">
+            <label for="checkboxHovering"> hovering </label><br>
+        </div>
+    <script src="blob.js"> </script>
 </body>
 </html>
