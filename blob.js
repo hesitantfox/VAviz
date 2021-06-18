@@ -1,103 +1,278 @@
-var sliderSize = document.getElementById("slidersizerange");
-var sliderCorners = document.getElementById("slidercornersrange");
-let shapeString = "polygon(49% 8%, 64% 8%,64% 8%, 77% 8%, 88% 11%, 94% 21%, 96% 33%, 96% 45%, 90% 54%, 82% 64%, 72% 72%, 63% 79%, 50% 84%, 38% 80%, 28% 74%, 20% 67%, 11% 58%, 4% 48%, 2% 36%, 4% 26%, 9% 15%, 19% 10%, 33% 8%, 33% 8%);";
-
-//var output = document.getElementById("demo");
-//output.innerHTML = slider.value; // Display the default slider value
-let root = document.documentElement;
-// Update the current slider value
-sliderSize.oninput = function() {
-  //output.innerHTML = this.value;
-root.style.setProperty('--size', sliderSize.value + "px");
-} 
-//root.style.setProperty('--size', slider.value);
-//let root = document.documentElement;
-sliderCorners.oninput = function() {
-  if(sliderCorners.value == 0){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 3%, 64% 5%, 74% 9%, 82% 15%, 90% 25%, 95% 35%, 98% 48%, 96% 61%, 92% 71%, 85% 81%, 76% 89%, 65% 95%, 51% 97%, 38% 95%, 28% 92%, 18% 84%, 10% 75%, 5% 63%, 3% 51%, 5% 39%, 9% 28%, 15% 20%, 23% 11%, 36% 5%)";}
-  if(sliderCorners.value == 1){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";}
-  if(sliderCorners.value == 2){
-  document.getElementById("shapeid").style.clipPath = "polygon(48% 0%, 41% 5%, 0% 90%, 1% 99%, 99% 99%, 100% 90%, 57% 4%)";}
-  if(sliderCorners.value == 3){
-  document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)";}
-  if(sliderCorners.value == 4){
-  document.getElementById("shapeid").style.clipPath = "polygon(0 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%)";}
-  if(sliderCorners.value == 5){
-  document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)";}
-  if(sliderCorners.value == 6){
-  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
-  if(sliderCorners.value == 7){
-  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
-  if(sliderCorners.value == 8){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)";}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#47484e;
 }
-  /** 
-if(sliderCorners.value > 5){
-document.getElementById("shapeid").style.clipPath = 
-"polygon(49% 8%, 64% 8%,64% 8%, 77% 8%, 88% 11%, 94% 21%, 96% 33%, 96% 45%, 90% 54%, 82% 64%, 72% 72%, 63% 79%, 50% 84%, 38% 80%, 28% 74%, 20% 67%, 11% 58%, 4% 48%, 2% 36%, 4% 26%, 9% 15%, 19% 10%, 33% 8%, 33% 8%)";
-} else
-document.getElementById("shapeid").style.clipPath = "polygon(49% 3%, 57% 4%, 63% 7%, 68% 12%, 73% 18%, 79% 26%, 88% 39%, 95% 58%, 94% 66%, 90% 70%, 79% 73%, 61% 75%, 51% 75%, 38% 75%, 19% 73%, 8% 70%, 4% 66%, 3% 58%, 10% 39%, 19% 26%, 25% 18%, 30% 12%, 35% 7%, 41% 4%)";
-}
-document.getElementById("shapeid").style.clipPath = 
-"polygon(49% 8%, 64% 8%,64% 8%, 77% 8%, 88% 11%, 94% 21%, 96% 33%, 96% 45%, 90% 54%, 82% 64%, 72% 72%, 63% 79%, 50% 84%, 38% 80%, 28% 74%, 20% 67%, 11% 58%, 4% 48%, 2% 36%, 4% 26%, 9% 15%, 19% 10%, 33% 8%, 33% 8%);";
 
-//shapestring = 
-//document.getElementById("shapeID").style.clipPath = polygon( )
+
+p{
+    color:white;
+}
+
+
+label {
+
+    color:white;
+}
+
+
+.rounders1 {
+  display:none;
+}
+
+.rounders2 {
+  display:none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+:root {
+  --size: 400px;
+}
+
+body {
+    --playState: "paused";
+}
+
+
+
+.container {
+    width:  800px;
+    height: 800px;
+    margin: 200px auto;
+    
+}
+/*
+.box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 500px;
+    left:  500px;
+}
+.side {
+    position: absolute; 
+    width: 200px;
+    height: 200px;
+    
+    background-color: none;
+}
+.side--front {
+   
+    transform: rotateY(0) translateZ(100px);
+    background-color: none;
+}
+.side--left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: #128ec9;
+}
+.side--top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: #0b5d85;
+}
+
+button {
+    left: -200px;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    width: 100%;
+    font-family: Impact, sans-serif;
+    font-size: 40px;
+    transition: .5s;
+    transform-origin: left;
+    text-align: left;
+    padding-left: 20px;
+}
+button:hover {
+    padding-left: 100px;
+}
 */
-document.getElementById('checkboxHovering').onclick = function(){
-  var hoverbox = document.getElementById("checkboxHovering");
-  if (this.checked){
-    document.body.style.setProperty("--playState", "running");
-    console.log("animation running"); 
+
+
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
   }
-  else{
-    document.body.style.setProperty("--playState", "paused");
-    console.log("animation paused"); 
+  
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #81c1d8;
+  }
+  
+  .button1:hover {
+    background-color: #81c1d8;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+
+/*
+.question
+{
+    visibility: hidden;
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    left: -450px;
+    top: -40px;
+    background-color:transparent;
+}
+*/
+
+.controls{
+  position: absolute;
+  left: 1200px;
+  top: 150px;
+  width: 300px;
+}
+
+.shapecontainer {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top:-300px;
+    right: 800px;
+}
+
+
+
+.shape {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    /*to keep in centered position during size change*/
+    right: calc(var(--size)*-0.5);
+    bottom:  calc(var(--size)*-0.5);
+    background-color: #6dd3de;
+    z-index: 10;
+    transition: 0.7s;
+    animation: float 3s infinite; 
+    animation-play-state: var(--playState);
+    clip-path: polygon(50% 3%, 64% 5%, 74% 9%, 82% 15%, 90% 25%, 95% 35%, 98% 48%, 96% 61%, 92% 71%, 85% 81%, 76% 89%, 65% 95%, 51% 97%, 38% 95%, 28% 92%, 18% 84%, 10% 75%, 5% 63%, 3% 51%, 5% 39%, 9% 28%, 15% 20%, 23% 11%, 36% 5%);
+}
+button:nth-child(1):hover ~ .shape {
+    clip-path: polygon(49% 3%, 57% 4%, 63% 7%, 68% 12%, 73% 18%, 79% 26%, 88% 39%, 95% 58%, 94% 66%, 90% 70%, 79% 73%, 61% 75%, 51% 75%, 38% 75%, 19% 73%, 8% 70%, 4% 66%, 3% 58%, 10% 39%, 19% 26%, 25% 18%, 30% 12%, 35% 7%, 41% 4%);
+    background-color: #2c405e;
+}
+
+button:nth-child(2):hover ~ .shape {
+    clip-path: polygon(49% 8%, 64% 8%,64% 8%, 77% 8%, 88% 11%, 94% 21%, 96% 33%, 96% 45%, 90% 54%, 82% 64%, 72% 72%, 63% 79%, 50% 84%, 38% 80%, 28% 74%, 20% 67%, 11% 58%, 4% 48%, 2% 36%, 4% 26%, 9% 15%, 19% 10%, 33% 8%, 33% 8%);
+    background-color: #faf287;
+}
+
+button:nth-child(3):hover ~ .shape {
+    clip-path: polygon(49% 3%, 62% 5%, 73% 9%, 81% 15%, 89% 24%, 94% 35%, 96% 48%, 96% 61%, 91% 72%, 85% 82%, 73% 90%, 62% 95%, 46% 95%, 34% 89%, 29% 79%, 32% 70%, 40% 60%, 39% 50%, 32% 40%, 27% 31%, 27% 19%, 30% 9%, 38% 5%,45% 3%);
+    background-color:#b872f2;
+    clip-path: polygon(49% 3%, 60% 7%, 73% 9%, 75% 18%, 89% 24%, 105% 40%, 96% 48%, 96% 61%, 91% 72%, 85% 82%, 73% 90%, 62% 95%, 46% 95%, 34% 89%, 29% 79%, 32% 70%, 40% 60%, 39% 50%, 32% 40%, 27% 31%, 27% 19%, 30% 9%, 38% 5%,45% 3%);
+}
+button:nth-child(3):hover ~.question { visibility: visible;}
+
+button:nth-child(4):hover ~ .shape {
+    clip-path: polygon(50% 3%, 64% 5%, 74% 9%, 82% 15%, 90% 25%, 95% 35%, 98% 48%, 96% 61%, 92% 71%, 85% 81%, 76% 89%, 65% 95%, 51% 97%, 38% 95%, 28% 92%, 18% 84%, 10% 75%, 5% 63%, 3% 51%, 5% 39%, 9% 28%, 15% 20%, 23% 11%, 36% 5%);
+}
+@keyframes float {
+    0% {
+        transform: translateY(0) rotateX(0);
+        
+    } 
+    50% {
+        transform: translateY(-30px) rotateX(3deg) scale(1.02);
+    }
+    100% {
+        transform: translateY(0) rotateX(0);
+        
+    }
+}
+
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
   }
 }
 
 
-var theInput = document.getElementById("colorPicker");
-   var theColor = theInput.value;
-   theInput.addEventListener("input", function() {
-
-    document.getElementById("shapeid").style.backgroundColor = theInput.value;
-
-    }, false);
-
-let saveFile = () => {
-    	
-  // Get the data from each element on the form.
-  const name = document.getElementById('txtName');
-  const age = document.getElementById('txtAge');
-  const email = document.getElementById('txtEmail');
-  const country = document.getElementById('selCountry');
-  const msg = document.getElementById('msg');
-  
-  // This variable stores all the data.
-  let data = 
-      '\r Name: ' + name.value + ' \r\n ' + 
-      'Age: ' +age.value + ' \r\n ' + 
-      'Email: ' + email.value + ' \r\n ' + 
-      'Country: ' + country.value + ' \r\n ' + 
-      'Message: ' + msg.value;
-  
-  // Convert the text to BLOB.
-  const textToBLOB = new Blob([data], { type: 'text/plain' });
-  const sFileName = 'formData.txt';	   // The file to save the data.
-
-  let newLink = document.createElement("a");
-  newLink.download = sFileName;
-
-  if (window.webkitURL != null) {
-      newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+.slidecontainer {
+    position: relative;
+    width: 50%; /* Width of the outside container */
   }
-  else {
-      newLink.href = window.URL.createObjectURL(textToBLOB);
-      newLink.style.display = "none";
-      document.body.appendChild(newLink);
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #f3eeee; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #bb5050; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #35f2ff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
   }
 
-  newLink.click(); 
-}
+  #smoothTriangle #SmoothTriablelable #smoothSquare #smoothSquarelable #smoothCircle #smoothCirclelable {
+    display: none;
+    visibility: hidden;
+  }
+  
