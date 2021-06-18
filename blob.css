@@ -1,9 +1,8 @@
- 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:#212121;
+    background-color:#47484e;
 }
 
 
@@ -15,6 +14,15 @@ p{
 label {
 
     color:white;
+}
+
+
+.rounders1 {
+  display:none;
+}
+
+.rounders2 {
+  display:none;
 }
 
 .dropdown-content {
@@ -35,10 +43,13 @@ body {
     --playState: "paused";
 }
 
+
+
 .container {
     width:  800px;
     height: 800px;
     margin: 200px auto;
+    
 }
 /*
 .box {
@@ -67,7 +78,7 @@ body {
 .side--top {
     transform: rotateX(90deg) translateZ(100px);
     background-color: #0b5d85;
-}*/
+}
 
 button {
     left: -200px;
@@ -90,6 +101,46 @@ button {
 button:hover {
     padding-left: 100px;
 }
+*/
+
+
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #81c1d8;
+  }
+  
+  .button1:hover {
+    background-color: #81c1d8;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  
 
 /*
 .question
@@ -104,11 +155,22 @@ button:hover {
 }
 */
 
+.controls{
+  position: absolute;
+  left: 1200px;
+  top: 150px;
+  width: 300px;
+}
+
 .shapecontainer {
     width: 600px;
     height: 600px;
-    position: relative;
+    position: absolute;
+    top:-300px;
+    right: 800px;
 }
+
+
 
 .shape {
     width: var(--size);
@@ -171,7 +233,7 @@ button:nth-child(4):hover ~ .shape {
 
 .slidecontainer {
     position: relative;
-    width: 20%; /* Width of the outside container */
+    width: 50%; /* Width of the outside container */
   }
   
   /* The slider itself */
@@ -208,3 +270,9 @@ button:nth-child(4):hover ~ .shape {
     background: #35f2ff; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+
+  #smoothTriangle #SmoothTriablelable #smoothSquare #smoothSquarelable #smoothCircle #smoothCirclelable {
+    display: none;
+    visibility: hidden;
+  }
+  
