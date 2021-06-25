@@ -1,3 +1,4 @@
+ 
 * {
     margin: 0;
     padding: 0;
@@ -8,32 +9,29 @@
 
 p{
     color:white;
+    background-color: transparent;
 }
 
 
 label {
 
     color:white;
+    background-color: transparent;
+
 }
 
 
 .rounders1 {
   display:none;
+  background-color: transparent;
+
 }
 
 .rounders2 {
   display:none;
+  background-color: transparent;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
 
 :root {
   --size: 400px;
@@ -41,13 +39,18 @@ label {
 
 body {
     --playState: "paused";
+    background-color: transparent;
+
 }
 
 
 
 .container {
-    width:  800px;
-    height: 800px;
+  background-image: url("Ipad.png");
+  background-repeat: no-repeat;
+  background-size: 100% 750px ;
+    width:  1000px;
+    height: 750px;
     margin: 200px auto;
     
 }
@@ -115,6 +118,8 @@ button:hover {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    background-color: transparent;
+
     transition-duration: 0.4s;
     cursor: pointer;
   }
@@ -156,26 +161,26 @@ button:hover {
 */
 
 .controls{
-  position: absolute;
+  position: relative;
+  background-color: transparent;
   left: 1200px;
   top: 150px;
   width: 300px;
 }
 
 .shapecontainer {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top:-300px;
-    right: 600px;
+  left: -500px;
+  top: 400px;
+    position: relative;
+    background-color: transparent;
 }
 
 
 
 .shape {
-    width: var(--size);
-    height: var(--size);
     position: absolute;
+    width: var(--size);
+    height: var(--size); 
     /*to keep in centered position during size change*/
     right: calc(var(--size)*-0.5);
     bottom:  calc(var(--size)*-0.5);
@@ -233,11 +238,13 @@ button:nth-child(4):hover ~ .shape {
 
 .slidecontainer {
     position: relative;
+    background-color: transparent;
     width: 50%; /* Width of the outside container */
   }
   
   /* The slider itself */
   .slider {
+    background-color: transparent;
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     width: 100%; /* Full-width */
@@ -256,6 +263,7 @@ button:nth-child(4):hover ~ .shape {
   
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
   .slider::-webkit-slider-thumb {
+   
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
@@ -265,6 +273,7 @@ button:nth-child(4):hover ~ .shape {
   }
   
   .slider::-moz-range-thumb {
+    background-color: transparent;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
     background: #35f2ff; /* Green background */
@@ -272,7 +281,12 @@ button:nth-child(4):hover ~ .shape {
   }
 
   #smoothTriangle #SmoothTriablelable #smoothSquare #smoothSquarelable #smoothCircle #smoothCirclelable {
+    background-color: transparent;
     display: none;
     visibility: hidden;
+  }
+  
+  .colorPicker {
+    background-color: transparent;
   }
   
