@@ -18,20 +18,20 @@
             <div class="shape" id="shapeid"></div>
         </div>
         <div class="controls">
-        <div class="slidecontainer">
-            <label for="slidersizerange"> size </label><br>
-            <input type="range" min="1" max="800" value="200" class="slider" id="slidersizerange" name ="slidersizerange">
-            <br>
-            <br>
-            <p>choose a shape:
-            <button onclick="changeToCircle()" class="button button1">circle</button>
-            <button onclick="changeToSquare()" class="button button1">square</button>
-            <p></p>
-            <div class="rounders" id="rounders1">
-            <label for="smoothSquare" id="smoothSquarelable"> rounded corners </label><br>
-            <input type="range" min="0" max="2" value="0" class="slider" id="smoothSquare" name ="smoothSquare">
-            <p></p>
-        </div>
+            <div class="slidecontainer">
+                <label for="slidersizerange"> size </label><br>
+                <input type="range" min="1" max="800" value="200" class="slider" id="slidersizerange" name ="slidersizerange">
+                <br>
+                <br>
+                <p>choose a shape:
+                <button onclick="changeToCircle()" class="button button1">circle</button>
+                <button onclick="changeToSquare()" class="button button1">square</button>
+                <p></p>
+                <div class="rounders1" id="rounders1">
+                <label for="smoothSquare" id="smoothSquarelable"> rounded corners </label><br>
+                <input type="range" min="0" max="2" value="0" class="slider" id="smoothSquare" name ="smoothSquare">
+                <p></p>
+             </div>
             <button onclick="changeToTriangle()"class="button button1">triangle</button>
             <p></p>
             <div class="rounders2" id="rounders2">
@@ -41,20 +41,16 @@
         </div>
             <button onclick="changeToStar()"class="button button1">star</button>
             <p></p>
-            <br>
-            <br>
-            <input type="range" min="1" max="10" value="0" class="slider" id="slidercornersrange" name ="slidercornersrange">
+           
+           <!-- <<input type="range" min="1" max="10" value="0" class="slider" id="slidercornersrange" name ="slidercornersrange">-->
             <p></p>
-          
-        </div>
-        <div class="dropdownAndCheckboxContainer">
-            <div class="colorPicker">
-                <span>_</span>
-                <label for="favcolor">Select a color:</label>
-                    <input type="color" id="colorPicker" name="favcolor" value="#ff0000"> 
-                </div>
+    </div>
+        <div class="colorPicker">
+            <br>
+            <label for="favcolor">Select a color:</label>
+                <input type="color" id="colorPicker" name="favcolor" value="#ff0000">
                 <br>
-            </div>
+        </div>
             <input type="checkbox" id="checkboxHovering" name="checkboxHovering" value="true">
             <label for="checkboxHovering"> hovering </label><br>
         </div>
