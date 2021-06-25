@@ -105,12 +105,46 @@ document.getElementById('checkboxHovering').onclick = function(){
   if (this.checked){
     document.body.style.setProperty("--playState", "running");
     console.log("animation running"); 
+    document.getElementById("shapeid").style.animation = "float 3s infinite"; 
+    document.getElementById('checkboxJumping').checked = false;
+    document.getElementById('checkboxBounce').checked = false;
   }
   else{
     document.body.style.setProperty("--playState", "paused");
     console.log("animation paused"); 
   }
 }
+
+document.getElementById('checkboxJumping').onclick = function(){
+  var hoverbox = document.getElementById("checkboxJumping");
+  if (this.checked){
+    document.body.style.setProperty("--playState", "running");
+    console.log("animation running"); 
+    document.getElementById("shapeid").style.animation = "Jump 3s infinite"; 
+    document.getElementById('checkboxHovering').checked = false;
+    document.getElementById('checkboxBounce').checked = false;
+  }
+  else{
+    document.body.style.setProperty("--playState", "paused");
+    console.log("animation paused"); 
+  }
+}
+
+document.getElementById('checkboxBounce').onclick = function(){
+  var hoverbox = document.getElementById("checkboxBounce");
+  if (this.checked){
+    document.body.style.setProperty("--playState", "running");
+    console.log("animation running"); 
+    document.getElementById("shapeid").style.animation = "bounce 3s infinite"; 
+    document.getElementById('checkboxHovering').checked = false;
+    document.getElementById('checkboxJumping').checked = false;
+  }
+  else{
+    document.body.style.setProperty("--playState", "paused");
+    console.log("animation paused"); 
+  }
+}
+
 
 
 var theInput = document.getElementById("colorPicker");
