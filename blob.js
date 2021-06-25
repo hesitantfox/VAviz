@@ -14,26 +14,26 @@ root.style.setProperty('--size', sliderSize.value + "px");
 } 
 //root.style.setProperty('--size', slider.value);
 //let root = document.documentElement;
-sliderCorners.oninput = function() {
-  if(sliderCorners.value == 0){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 3%, 64% 5%, 74% 9%, 82% 15%, 90% 25%, 95% 35%, 98% 48%, 96% 61%, 92% 71%, 85% 81%, 76% 89%, 65% 95%, 51% 97%, 38% 95%, 28% 92%, 18% 84%, 10% 75%, 5% 63%, 3% 51%, 5% 39%, 9% 28%, 15% 20%, 23% 11%, 36% 5%)";}
-  if(sliderCorners.value == 1){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";}
-  if(sliderCorners.value == 2){
-  document.getElementById("shapeid").style.clipPath = "polygon(48% 0%, 41% 5%, 0% 90%, 1% 99%, 99% 99%, 100% 90%, 57% 4%)";}
-  if(sliderCorners.value == 3){
-  document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)";}
-  if(sliderCorners.value == 4){
-  document.getElementById("shapeid").style.clipPath = "polygon(0 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%)";}
-  if(sliderCorners.value == 5){
-  document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)";}
-  if(sliderCorners.value == 6){
-  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
-  if(sliderCorners.value == 7){
-  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
-  if(sliderCorners.value == 8){
-  document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)";}
-}
+//sliderCorners.oninput = function() {
+ // if(sliderCorners.value == 0){
+ // document.getElementById("shapeid").style.clipPath = "polygon(50% 3%, 64% 5%, 74% 9%, 82% 15%, 90% 25%, 95% 35%, 98% 48%, 96% 61%, 92% 71%, 85% 81%, 76% 89%, 65% 95%, 51% 97%, 38% 95%, 28% 92%, 18% 84%, 10% 75%, 5% 63%, 3% 51%, 5% 39%, 9% 28%, 15% 20%, 23% 11%, 36% 5%)";}
+//  if(sliderCorners.value == 1){
+ // document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";}
+ //// if(sliderCorners.value == 2){
+//  document.getElementById("shapeid").style.clipPath = "polygon(48% 0%, 41% 5%, 0% 90%, 1% 99%, 99% 99%, 100% 90%, 57% 4%)";}
+ // if(sliderCorners.value == 3){
+ // document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)";}
+ // if(sliderCorners.value == 4){
+//  document.getElementById("shapeid").style.clipPath = "polygon(0 0, 100% 0, 100% 20%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%)";}
+ // if(sliderCorners.value == 5){
+ // document.getElementById("shapeid").style.clipPath = "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)";}
+//  if(sliderCorners.value == 6){
+//  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
+//  if(sliderCorners.value == 7){
+//  document.getElementById("shapeid").style.clipPath = "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)";}
+//  if(sliderCorners.value == 8){
+ // document.getElementById("shapeid").style.clipPath = "polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)";}
+//}
 
 
 function changeToCircle(){
