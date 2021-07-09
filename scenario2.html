@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="blob.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <img src="image1.png" class="scenario" alt="There should be some Scenario speechbubbles here. Something went wrong.">
+
+    <div class="container">
+         <!-- <button> <p>happy</p> </button> -->
+         <!-- <button> <p>question</p> </button> -->
+        <!-- <button> <p>-</p> </button> -->
+        
+        <div class="shapecontainer">
+            <div class="shape" id="shapeid"></div>
+        </div>
+        <div class="controls">
+            <div class="slidecontainer">
+                <label for="slidersizerange"> size </label><br>
+                <input type="range" min="1" max="800" value="200" class="slider" id="slidersizerange" name ="slidersizerange">
+                <br>
+                <br>
+                <p>choose a shape:
+                <button onclick="changeToCircle()" class="button button1">circle</button>
+                <button onclick="changeToSquare()" class="button button1">square</button>
+                <p></p>
+                <div class="rounders1" id="rounders1">
+                <label for="smoothSquare" id="smoothSquarelable"> rounded corners </label><br>
+                <input type="range" min="0" max="2" value="0" class="slider" id="smoothSquare" name ="smoothSquare">
+                <p></p>
+             </div>
+            <button onclick="changeToTriangle()"class="button button1">triangle</button>
+            <p></p>
+            <div class="rounders2" id="rounders2">
+            <label for="smoothTriangle" id="smoothTrianglelable"> rounded corners </label><br>
+            <input type="range" min="0" max="2" value="0" class="slider" id="smoothTriangle" name ="smoothTriangle">
+            <p></p>
+        </div>
+            <button onclick="changeToStar()"class="button button1">star</button>
+            <p></p>
+           
+           <!-- <<input type="range" min="1" max="10" value="0" class="slider" id="slidercornersrange" name ="slidercornersrange">-->
+            <p></p>
+    </div>
+        <div class="colorPicker">
+            <br>
+            <label for="favcolor">Select a color:</label>
+                <input type="color" id="colorPicker" name="favcolor" value="#ff0000">
+                <br>
+                <br>
+        </div>
+            <input type="checkbox" id="checkboxHovering" name="checkboxHovering" value="false">
+            <label for="checkboxHovering"> hovering </label><br>
+            <input type="checkbox" id="checkboxJumping" name="checkboxJumping" value="false">
+            <label for="checkboxJumping"> pulse </label><br>
+            <input type="checkbox" id="checkboxBounce" name="checkboxBounce" value="false">
+            <label for="checkboxBounce"> bounce </label><br>
+            <input type="button" class = "skippers" name="b2" value="submit the design" onclick="location.href='Scenario3.html'" style="top: 20px; width: 200px; font-size: large;">
+        </div>
+        
+    </div>
+
+    <script src="blob.js"> </script>
+</body>
+</html>
